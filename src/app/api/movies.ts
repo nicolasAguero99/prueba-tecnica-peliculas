@@ -1,5 +1,14 @@
 // Constants
-import { API_POPULAR_URL, API_TRENDING_URL, API_URL, OPTIONS_API, API_TOP_RATED_URL } from '@/constants/constants'
+import { API_POPULAR_URL, API_TRENDING_URL, API_URL, API_TOP_RATED_URL } from '@/constants/constants'
+import { OptionsApi } from '@/types/types'
+
+export const OPTIONS_API: OptionsApi = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: `Bearer ${process.env.API_KEY}`
+  }  
+}
 
 // Types
 import { MovieTypes } from '@/types/types.d'

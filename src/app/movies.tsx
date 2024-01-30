@@ -61,7 +61,7 @@ export default function Movies(): JSX.Element {
   
   const listMovies: Movie[] = useMemo(() => {
     return allMoviesInfo?.pages.reduce((acc, page) => {
-      return [...acc, ...page.results];
+      return page ? [...acc, ...page.results] : acc
     }, []);
   }, [allMoviesInfo])
 
